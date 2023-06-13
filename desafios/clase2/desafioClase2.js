@@ -22,9 +22,11 @@ class ProductManager {
         }
 
         const productValues = Object.values(newProduct)
-        const notNull = productValues.includes(undefined)
-        
-        if(notNull) {
+        const emptyValue = Object.entries(newProduct).length
+        const isUndefined = productValues.includes(undefined)
+        const isNull = productValues.includes(null)
+        console.log(emptyValue);
+        if(isUndefined || isNull) {
             console.log("Error, se deben enviar todos los campos");
             return
         }
@@ -80,14 +82,33 @@ const producto4 = {
     stock: 4
 }
 
+const producto5 = {
+    title: 'Joystick inalámbrico',
+    description: 'DualSense CFI-ZCT1 white y black',
+    price: 48000,
+    thumbnail: '',
+    code: 'SFG8S4',
+    stock: 3
+}
+
+const producto6 = {
+    title: 'Joystick inalámbrico',
+    description: 'DualSense CFI-ZCT1 white y black',
+    price: 48000,
+    thumbnail: null,
+    code: 'GS64D5',
+    stock: 3
+}
+
 const manager = new ProductManager()
 
 manager.addProduct(producto1)
 manager.addProduct(producto2)
 manager.addProduct(producto3)
 manager.addProduct(producto4)
+manager.addProduct(producto5)
+manager.addProduct(producto6)
 
 console.log(manager.getProducts());
-//console.log(manager.getProductById(0));
 manager.getProductById(1);
 manager.getProductById(0);
