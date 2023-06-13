@@ -22,11 +22,11 @@ class ProductManager {
         }
 
         const productValues = Object.values(newProduct)
-        const emptyValue = Object.entries(newProduct).length
         const isUndefined = productValues.includes(undefined)
         const isNull = productValues.includes(null)
-        console.log(emptyValue);
-        if(isUndefined || isNull) {
+        const emptyValue = productValues.includes('')
+
+        if(isUndefined || isNull || emptyValue) {
             console.log("Error, se deben enviar todos los campos");
             return
         }
