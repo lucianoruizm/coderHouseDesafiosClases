@@ -1,11 +1,11 @@
 [
   {
-    "title": "Panel Calefactor",
-    "description": "1400w Temptech Alto Rendimiento",
-    "price": 50000,
-    "thumbnail": "/.calefactor.png",
-    "code": "AS46D5",
-    "stock": 5,
+    "title": "Camara de Seguridad",
+    "description": "Resolución de 2MP",
+    "price": 16000,
+    "thumbnail": "./camara.png",
+    "code": "A6DF8",
+    "stock": 2,
     "id": 1
   }
 ]
