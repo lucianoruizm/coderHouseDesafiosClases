@@ -24,7 +24,7 @@ app.get('/usuario', (req, res) => {
         nombre: "Michael",
         apellido: "Wayne",
         edad: 48,
-        correro: "micwayne@mwmail.com"
+        correro: "micwayne1@mwmail.com"
     }
     return res.send(user)
 })
